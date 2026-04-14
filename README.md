@@ -26,6 +26,15 @@ pip install -r requirements.txt
 python app.py
 ```
 
+## 打包为 EXE
+
+```bash
+pip install -r requirements.txt
+pyinstaller --noconfirm --clean --onefile --windowed --name ClipboardAIAssistant app.py
+```
+
+打包完成后，可执行文件位于 `dist/ClipboardAIAssistant.exe`。
+
 ## 使用方式
 
 1. 启动程序。
