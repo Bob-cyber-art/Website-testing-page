@@ -44,16 +44,31 @@ class AIClient:
             ]
         )
 
-    def _send_request(self, messages: list[dict[str, Any]]) -> str:
+    def test_connection(self) -> str:
+        return self._send_request(
+            [
+                {"role": "system", "content": "你是一个连接测试助手。"},
+                {"role": "user", "content": "请回复：API connection ok"},
+            ],
+            extra_body={"max_tokens": 16},
+        )
+
+    def _send_request(
+        self,
+        messages: list[dict[str, Any]],
+        extra_body: dict[str, Any] | None = None,
+    ) -> str:
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {self.config.api_key}",
         }
-        body = {
+        body: dict[str, Any] = {
             "model": self.config.model,
             "messages": messages,
             "temperature": self.config.temperature,
         }
+        if extra_body:
+            body.update(extra_body)
 
         try:
             response = requests.post(

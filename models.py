@@ -16,10 +16,11 @@ class ClipboardPayload:
 
 @dataclass(slots=True)
 class AppConfig:
+    provider: str = "custom"
     base_url: str = "https://api.openai.com/v1/chat/completions"
     api_key: str = ""
     model: str = "gpt-4.1-mini"
-    global_hotkey: str = "ctrl+shift+a"
+    show_window_hotkey: str = "ctrl+shift+s"
     system_prompt: str = "请直接回答剪贴板中的问题，简洁清晰。"
     request_timeout: int = 60
     temperature: float = 0.7

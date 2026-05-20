@@ -804,6 +804,10 @@
   ('shlex', 'C:\\Users\\jason\\miniconda3\\Lib\\shlex.py', 'PYMODULE'),
   ('shutil', 'C:\\Users\\jason\\miniconda3\\Lib\\shutil.py', 'PYMODULE'),
   ('signal', 'C:\\Users\\jason\\miniconda3\\Lib\\signal.py', 'PYMODULE'),
+  ('single_instance',
+   'C:\\Users\\jason\\Desktop\\CS '
+   'new\\Website-testing-page\\single_instance.py',
+   'PYMODULE'),
   ('socket', 'C:\\Users\\jason\\miniconda3\\Lib\\socket.py', 'PYMODULE'),
   ('socks',
    'C:\\Users\\jason\\miniconda3\\Lib\\site-packages\\socks.py',
